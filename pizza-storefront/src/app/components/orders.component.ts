@@ -1,3 +1,4 @@
+import { OrderSummary } from './../models';
 import { PizzaService } from './../pizza.service';
 import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Order } from '../models';
@@ -16,7 +17,7 @@ export class OrdersComponent implements OnInit, AfterViewInit {
   ) {}
   
   email: string = this.activatedRoute.snapshot.params['email'];
-  orderList: Order[] = [];
+  orderList: OrderSummary[] = [];
 
   ngOnInit(): void {
     this.showOrders(this.activatedRoute.snapshot.params['email']);
