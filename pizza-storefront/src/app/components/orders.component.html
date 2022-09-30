@@ -1,0 +1,15 @@
+<h1>Orders for {{ this.email }}</h1>
+<div>
+  <div *ngFor="let order of orderList">
+    <div *ngIf="order.amount > 0" class="order-box">
+      <h4>Order Id: {{ order.order_id }}</h4>
+      <h4>${{ order.amount | number: "1.2-2" }}</h4>
+    </div>
+  </div>
+  <div *ngIf="orderList.length == []">
+    <h4>No orders found for {{ this.email }}</h4>
+  </div>
+  <div class="button-container">
+    <button type="button" class="back-button" (click)="backToOrdering()">Back to Ordering</button>
+  </div>
+</div>

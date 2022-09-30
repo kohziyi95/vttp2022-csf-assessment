@@ -1,0 +1,17 @@
+.order-box{
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin:10px;
+    padding:10px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    margin:10px;
+}
+
+.back-button{
+    padding: 5px;
+    font-size: 1.2rem;
+}
